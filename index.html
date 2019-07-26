@@ -6,51 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/icomoon/style.css">
     <link rel="stylesheet" href="stylesheets/scss/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
-    <div class="position-absolute h-100 w-100">
+    <div class="position-absolute h-100 w-100" id="contentLogin">
 
         <div class="card mx-auto mt-5" style="width: 25rem;">
             <img class="card-img-top m-card-img-top" src="./img/company/logo.png" alt="Card image cap">
             <div class="card-body">
 
-
-
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" novalidate action="#Submit">
                     <div class="form-row">
                         <div class="col-md-12 mb-3">
                             <label for="validationTooltipUsername">Username</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                        <i class="icon-user"></i>
+                                    </span>
                                 </div>
                                 <input type="text" class="form-control" id="validationTooltipUsername"
                                     placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
                                 <div class="invalid-tooltip">
-                                    Please choose a unique and valid username.
+                                    Please enter your username.
                                 </div>
                             </div>
                         </div>
 
-                        
+
                         <div class="col-md-12 mb-3">
-                                <label for="validationTooltipPassword">Password</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="validationTooltipPasswordPrepend">@</span>
-                                    </div>
-                                    <input type="text" class="form-control" id="validationTooltipPassword"
-                                        placeholder="Password" aria-describedby="validationTooltipPasswordPrepend" required>
-                                    <div class="invalid-tooltip">
-                                        Please choose a unique and valid Password.
-                                    </div>
+                            <label for="validationTooltipPassword">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipPasswordPrepend">
+                                        <i class="icon-locked"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipPassword"
+                                    placeholder="Password" aria-describedby="validationTooltipPasswordPrepend" required>
+                                <div class="invalid-tooltip">
+                                    Please enter your password.
                                 </div>
                             </div>
+                        </div>
                     </div>
-                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <button class="btn btn-primary" type="submit">Log in</button>
+                    <div class="alert alert-danger mt-2 d-none" role="alert">
+                       <strong>Incorrect user</strong>, try again.
+                    </div>
                 </form>
 
 
@@ -69,7 +75,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="./javascript/bootstrap/myTouch.js"></script>
+    <script src="./javascript/bootstrap/myTouch.js"></script>
 </body>
 
 </html>

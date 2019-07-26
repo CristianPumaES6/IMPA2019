@@ -10,9 +10,21 @@
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                } else {
+                    let user = $('#validationTooltipUsername').val();
+                    let pass = $('#validationTooltipPassword').val();
+
+                    if (user === 'admin' && pass === 'admin') {
+                        $('#contentLogin').addClass('d-none');
+                    } else {
+                        $('#contentLogin .alert').removeClass('d-none');
+                    }
                 }
                 form.classList.add('was-validated');
             }, false);
         });
     }, false);
 })();
+
+
+
