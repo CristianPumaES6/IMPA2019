@@ -1,0 +1,124 @@
+ol#list-lv {
+  color: #003594;
+  cursor: pointer;
+  width: 100%;
+  // background: rgba(0, 0, 0, 0.4);
+
+  :hover {
+    h1 {
+      color: #dc9d00;
+
+      .img-logo {
+        height: 20px;
+        opacity: 1;
+      }
+    }
+    //
+  }
+
+  li {
+    ol {
+      max-height: 0px;
+      overflow: hidden;
+    }
+  }
+
+  .lv1-open {
+    ol {
+      max-height: 9000px;
+      li {
+        &:hover {
+          h2 {
+            color: #dc9d00;
+          }
+        }
+        ol {
+          max-height: 0px;
+        }
+      }
+      .lv2-open {
+        li {
+          &:hover {
+            h3 {
+              color: #dc9d00;
+            }
+          }
+        }
+
+        ol {
+          max-height: 9000px;
+        }
+      }
+      .lv3-open {
+        //background: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  li {
+    i {
+      margin-right: 8px;
+    }
+    h1 {
+      position: relative;
+      padding-left: 20px;
+      .img-logo {
+        position: absolute;
+        top: -2px;
+        right: 10px;
+        height: 20px;
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      .icon-plus-lv1:before {
+        content: "\e931";
+        transition: all 0.5s;
+      }
+    }
+    h2 {
+      position: relative;
+      padding-left: 40px;
+      .icon-plus-lv2:before {
+        content: "\e931";
+        transition: all 0.5s;
+      }
+      &:hover {
+        .img-logo {
+          height: 20px;
+          opacity: 1;
+        }
+      }
+    }
+    h3 {
+      padding-left: 60px;
+      .icon-plus-lv3:before {
+        content: "\e92f";
+        transition: all 0.5s;
+      }
+    }
+    &.lv1-open {
+      h1 {
+        .icon-plus-lv1:before {
+          content: "\e932";
+        }
+      }
+
+      .lv2-open {
+        h2 {
+          .icon-plus-lv2:before {
+            content: "\e932";
+            transition: all 0.5s;
+          }
+        }
+      }
+      .lv3-open {
+        h3 {
+          .icon-plus-lv3:before {
+            content: "\e930";
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

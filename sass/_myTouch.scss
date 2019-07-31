@@ -1,17 +1,75 @@
-.m-card-img-top {
-    width: 80%;
+.absolute-100 {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+  width: calc(100% - 11px);
+  height: calc(100% - 16px);
+  background: rgba(255, 255, 255, 1);
+  margin: 5px 5px 5px 0px;
+  border-radius: 10px;
+  border: 3pt solid #003594;
+  transition: all 0.5s;
+  overflow: hidden;
+  text-align: center;
+  line-height: 500px;
+  img {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: auto;
+  }
+  &:hover {
+    width: 130%;
+    height: 150%;
+    background: rgba(255, 255, 255, 1);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.relative {
+  position: relative;
 }
 
-.btn-help {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
+.height-100 {
+  height: 650px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
-    width: 50px;
-    height: 50px;
-    background: gray;
-    text-align: center;
-    line-height: 50px;
-    font-size: 25px;
+.height-tabla {
+  height: 378px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#PartNo,
+#Description {
+  padding: 4px;
+}
+
+body {
+  background-image: url("../image/img-bu.jpg");
+  background-size: 100% auto center;
+  font-family: "Inconsolata" !important;
+}
+
+.back-9 {
+  background: rgba(255, 255, 255, 0.9);
+}
+.c-body-0 {
+  padding: 0px !important;
+  width: 100% !important;
+}
+
+#Search {
+  padding: 5px;
+}
+label {
+  color: #003594;
 }

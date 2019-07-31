@@ -3,5 +3,13 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-//@import "compass/reset";
-@import "myTouch.scss"
+@import "compass/reset";
+@import "myTouch.scss"; 
+
+@import "./list";
+@import "./_container";
+@import "./card";
+@import "./group";
+@import "./position";
+@import "./myTouch";
+@import "./table";

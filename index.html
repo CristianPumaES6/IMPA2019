@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="data/data.js"></script>
     <link rel="stylesheet" href="stylesheets/icomoon/style.css">
     <link rel="stylesheet" href="stylesheets/scss/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/font.css">
 </head>
 
 <body>
@@ -69,16 +71,109 @@
 
 
     <div id="contentData" class="position-absolute h-100 w-100 d-none">
-        <span class="rounded-circle btn-help">
-            <i class="icon-help"></i>
-        </span>
-    </div>
+
+        <div class="container-general flex-row">
+
+            <!-- Barra de menu -->
+            <div class="row-40">
+                <div class="card height-100" id="divContentBarra">
+                    <div class="c-body">
+                        <ol id="list-lv">
+                        </ol>
+                    </div>
+                </div>
+            </div>
 
 
-    <script src="javascript/jquery/jquery.js"></script>
-    <script src="javascript/jquery/popper.js"></script>
-    <script src="javascript/bootstrap/bootstrap.min.js"></script>
-    <script src="./javascript/bootstrap/myTouch.js"></script>
+            <div class="row-60">
+                <div class="flex-row">
+
+                    <div class="row-60">
+
+                        <div class="card">
+                            <div class="c-header">
+                                <h1>Search</h1>
+                            </div>
+                            <div class="c-body">
+                                <div class="group-input">
+                                    <label for="PartNo">PartNo : </label>
+                                    <input type="number" name="PartNo" id="PartNo"
+                                        onKeyDown="if(this.value.length==6 && event.keyCode!=8) return false;"
+                                        onkeyup="validateInputSearch()">
+                                    <input type="button" value="Search" id="Search" class="right" onclick="search()"
+                                        disabled>
+                                </div>
+                                <div class="group-input">
+                                    <label for="Description">Description : </label>
+                                    <input class="row-100" type="text" name="Description" id="Description"
+                                        style="text-transform: uppercase;" onkeyup="validateInputSearch()">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="c-body">
+
+                                <div class="group-input">
+                                    <label for="level1">Level 1 : </label>
+                                    <label id="level1"> -------------------- <label>
+                                </div>
+                                <div class="group-input">
+                                    <label for="level2">Level 2 : </label>
+                                    <label id="level2"> -------------------- <label>
+                                </div>
+                                <div class="group-input">
+                                    <label for="level3">Level 3 : </label>
+                                    <label id="level3"> -------------------- <label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-40 relative">
+                        <div class="absolute-100">
+                            <img src="mdn-logo-sm.png" srcset="./image/image001.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row-100">
+
+                    <div class="card height-tabla back-9">
+                        <div class="c-body c-body-0">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="w7">PartNo</th>
+                                        <th class="w40">Description</th>
+                                        <th class="w5">UOM</th>
+                                        <th class="w5">MTML UOM</th>
+                                        <th class="w40">Explanation</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listTable">
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="rounded-circle btn-help">
+                <i class="icon-help"></i>
+            </span>
+        </div>
+
+
+        <script src="javascript/jquery/jquery.js"></script>
+        <script src="javascript/jquery/popper.js"></script>
+        <script src="javascript/bootstrap/bootstrap.min.js"></script>
+        <script src="javascript/bootstrap/myTouch.js"></script>
+        <script src="javascript/generalObject.js"></script>
+        <script src="javascript/generarTabla.js"></script>
+        <script src="javascript/efectos.js"></script>
 </body>
 
 </html>
