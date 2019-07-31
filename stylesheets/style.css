@@ -159,6 +159,12 @@ label {
   color: #003594;
 }
 
+/* line 78, ../sass/_myTouch.scss */
+.card-img-top {
+  width: 50%;
+  margin: auto;
+}
+
 /* line 1, ../sass/_list.scss */
 ol#list-lv {
   color: #003594;
