@@ -1,30 +1,38 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-    'use strict';
-    window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    let user = $('#validationTooltipUsername').val();
-                    let pass = $('#validationTooltipPassword').val();
+var wWidth = 0;
+var wHeight = 0;
 
-                    if (user === 'admin' && pass === 'admin') {
-                        $('#contentLogin').addClass('d-none');
-                    } else {
-                        $('#contentLogin .alert').removeClass('d-none');
-                    }
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
+// A $( document ).ready() block.
+$(document).ready(function () {
+
+    wWidth = $(window).width();
+    wHeight = $(window).height();
+    centrarLogin();
+
+    $("#login").click(() => {
+        let user = $('#validationTooltipUsername').val();
+        let pass = $('#validationTooltipPassword').val();
+
+        if (user === 'admin' && pass === 'admin') {
+            $('#contentLogin').addClass('d-none');
+            $('#contentData').removeClass('d-none');
+        } else {
+            $('#contentLogin .alert').removeClass('d-none');
+        }
+    });
 
 
+    $(window).resize(function () {
+        wWidth = $(window).width();
+        wHeight = $(window).height();
+        centrarLogin();
+    });
+});
 
+
+
+
+
+function centrarLogin() {
+    let div_alto = $("#contentLogin .card").height();
+    $('#contentLogin .card').css('top', (wHeight - div_alto) / 2);
+}
